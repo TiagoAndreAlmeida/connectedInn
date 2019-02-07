@@ -6,6 +6,6 @@ def index (request):
     return render(request, 'index.html')
 
 def perfil(request, perfil_id):
-    perfil = Perfil('Flavio Almeida', 'flavio@flavio.com.br', '777777', 'Caelum')
+    perfil = Perfil.objects.get(id=perfil_id)
 
     return render(request, 'perfil.html', {"perfil" : perfil})
