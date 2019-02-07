@@ -8,9 +8,11 @@
 </head>
 <body>
     <h1>Detalhes perfil</h1>
-    nome: {{perfil.name}}
-    email: {{perfil.email}}
-    telefone: {{perfil.phone}}
-    nome_empresa: {{perfil.coorp}}
+    {% for n in perfils %}
+        nome: {{n.name}} <br>
+        email: {{n.email}} <br>
+        telefone: {{n.phone}} <br>
+        nome_empresa: {{n.coorp}} <br>
+    {% endfor %}
 </body>
 </html>

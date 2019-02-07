@@ -3,9 +3,9 @@ from perfils.models import Perfil
 
 # Create your views here.
 def index (request):
-    return render(request, 'index.html')
+
+    return render(request, 'index.html', {"perfils" : Perfil.objects.all()})
 
 def perfil(request, perfil_id):
-    perfil = Perfil.objects.get(id=perfil_id)
-
-    return render(request, 'perfil.html', {"perfil" : perfil})
+    perfils = Perfil.objects.all()
+    return render(request, 'perfil.html', {"perfils" : perfils})

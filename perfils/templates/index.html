@@ -7,6 +7,16 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <h1>Lista de perfils</h1>
+    {% if perfils %}
+    <ul>
+        {% for p in perfils %}
+        <li> <strong>Name: </strong> {{p.name}}</li>
+        <li> <strong>E-mail: </strong> {{p.email}}</li>
+        <li> <strong>Phone: </strong> {{p.phone}}</li>
+        <li> <strong>Corp: </strong> {{p.coorp}}</li> <br>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </body>
 </html>
