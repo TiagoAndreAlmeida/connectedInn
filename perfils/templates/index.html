@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Lista de perfils</h1>
+    {% if perfils %}
+    <ul>
+        {% for p in perfils %}
+        <li> <strong>Name: </strong> {{p.name}}</li>
+        <li> <strong>E-mail: </strong> {{p.email}}</li>
+        <li> <strong>Phone: </strong> {{p.phone}}</li>
+        <li> <strong>Corp: </strong> {{p.coorp}}</li> <br>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
